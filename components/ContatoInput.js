@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import {View,Text,TextInput,Button, StyleSheet} from 'react-native';
+import { gray, darkgray } from 'color-name';
 
 const ContatoInput = (props) => {
     const[contato,setContato] = useState('');
@@ -15,7 +16,8 @@ const ContatoInput = (props) => {
     <View style={styles.contatoView}>
     {/* usuaario ira inserir contatos aqui*/}
     <Text style={{alignItems:'center',marginLeft:80,fontSize:16}}>Novo Contato</Text>
-    <TextInput 
+    
+    <TextInput
     
     placeholder="Nome" 
     style={styles.ContatoInputText} 
@@ -43,13 +45,17 @@ const styles = StyleSheet.create({
     
     ContatoInputText:{
      marginBottom:25,
-     marginTop:8
+     marginTop:8,
+    bottom:1,
+    borderColor:'#ccc',
+    borderBottomWidth:0.5,
+    paddingTop:10
     },
     contatoView:{
         padding:2,
         marginBottom:5,
 
-      }  ,
+      },
     itemNaLista:{
         padding: 12,
         backgroundColor: '#CCC',
@@ -58,6 +64,7 @@ const styles = StyleSheet.create({
         marginBottom:40,
         borderRadius: 8
     }
+
 })
 
 export default ContatoInput;
