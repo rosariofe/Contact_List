@@ -20,11 +20,11 @@ export default function App() {
 /* (contato => {
 para cada contato rodar.
 })*/
-  const removerContato= (keyASerRemovida,keyASerRemovida1) => {
+  const removerContato= (key) => {
     setContatos (contatos => {
-      return contatos.filter((contato, telefone) => {
-        contato.key !==keyASerRemovida;
-        telefone.key !==keyASerRemovida1;
+      return contatos.filter(contato => {
+       return contato.key !==key;
+    
       });
       
     });
@@ -56,7 +56,9 @@ para cada contato rodar.
 }
 const styles = StyleSheet.create({
   telaPrincipalView:{
-    padding:50
+    paddingLeft:50,
+    paddingRight:50,
+    paddingBottom:150,
+    paddingTop:40
   }  
 });
-
