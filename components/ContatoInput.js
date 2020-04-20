@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import {View,Text,TextInput,Button, StyleSheet} from 'react-native';
-import { gray, darkgray } from 'color-name';
 
 const ContatoInput = (props) => {
     const[contato,setContato] = useState('');
@@ -15,7 +14,7 @@ const ContatoInput = (props) => {
     
     <View style={styles.contatoView}>
     {/* usuaario ira inserir contatos aqui*/}
-    <Text style={{alignItems:'center',marginLeft:80,fontSize:16}}>Novo Contato</Text>
+    
     
     <TextInput
     
@@ -31,39 +30,46 @@ const ContatoInput = (props) => {
     onChangeText={capturarTelefone}
     value={telefone}/>
     
-    
-    <Button  title="Adicionar Contato" color="#4876FF"
+    <View style={styles.buttonView}>
+    <View style={styles.botao}>
+    <Button title="Adicionar Contato" color="#4876FF"
     onPress={() => props.onAdicionarContato(contato,telefone)}
     
     /> 
+    </View>
+    </View>
     </View> 
-//a () => ajuda a nao rodar a funcao no momento do carregamento da pagina
     )
 }
 
 const styles = StyleSheet.create({
-    
+    botao:{
+        width:'100%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    buttonView:{
+        
+        width: '100%',
+        marginTop:8
+    },
     ContatoInputText:{
-     marginBottom:25,
+     marginBottom:20,
      marginTop:8,
     bottom:1,
     borderColor:'#ccc',
     borderBottomWidth:0.5,
-    paddingTop:10
+    paddingTop:10,
+    
+
     },
     contatoView:{
-        padding:2,
+        padding:20,
         marginBottom:5,
 
       },
-    itemNaLista:{
-        padding: 12,
-        backgroundColor: '#CCC',
-        borderBottomColor: '#000',
-        borderWidth: 1,
-        marginBottom:40,
-        borderRadius: 8
-    }
+    
 
 })
 
