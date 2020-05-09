@@ -2,9 +2,9 @@ import React,{useState} from 'react';
 import { Text, View, StyleSheet, TextInput,Button ,FlatList  } from 'react-native';
 import Cartao from '../components/Cartao';
 import ContatoItem from '../components/ContatoItem';
-import ContatoInput from '../components/ContatoInput';
+import InputContato from '../components/InputContato';
 
-const TelaAdicionar = (props) => {
+const AdicionarTela = (props) => {
 const [contatos, setContatos] = useState([]);
 const [contadorContatos,setContadorContatos] = useState(10); //falta
 
@@ -36,7 +36,7 @@ const [contadorContatos,setContadorContatos] = useState(10); //falta
         <View style={estilos.telaPrincipalView}>
         <Cartao style={estilos.itemView}>
         
-        <ContatoInput onAdicionarContato = {adicionarContato} />
+        <InputContato onAdicionarContato = {adicionarContato} />
         </Cartao>
         <View style ={estilos.telaitem}>
                 
@@ -115,4 +115,4 @@ const [contadorContatos,setContadorContatos] = useState(10); //falta
         },
         
     });
-export default TelaAdicionar;
+export default AdicionarTela;

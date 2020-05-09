@@ -1,13 +1,13 @@
 import React,{useState} from 'react';
 import { StyleSheet, Text, View, TextInput,Button,FlatList } from 'react-native';
-import TelaAdicionar from './telas/TelaAdicionar';
+import AdicionarTela from './telas/AdicionarTela';
 
 export default function App() {
 
 
   return (
 /*    <View style={styles.container} >*/
- <TelaAdicionar />
+ <AdicionarTela />
   );
 
 }

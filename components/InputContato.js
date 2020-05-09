@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
-import {View,Text,TextInput,Button, StyleSheet} from 'react-native';
+import {View,Text,TextInput,Button, StyleSheet, TextInputComponent} from 'react-native';
 
-const ContatoInput = (props) => {
+const InputContato = (props) => {
     const[contato,setContato] = useState('');
     const capturarContato = (contato) => {
         setContato(contato);
@@ -13,20 +13,18 @@ const ContatoInput = (props) => {
     return (
     
     <View style={styles.contatoView}>
-    {/* usuaario ira inserir contatos aqui*/}
-    
     
     <TextInput
     
     placeholder="Nome" 
-    style={styles.ContatoInputText} 
+    style={styles.InputContatoText} 
     onChangeText={capturarContato}
     value={contato}/>
 
     <TextInput
     
     placeholder="Numero de Telefone"
-    style={styles.ContatoInputText} 
+    style={styles.InputContatoText} 
     onChangeText={capturarTelefone}
     value={telefone}/>
     
@@ -54,7 +52,7 @@ const styles = StyleSheet.create({
         width: '100%',
         marginTop:8
     },
-    ContatoInputText:{
+    InputContatoText:{
      marginBottom:20,
      marginTop:8,
     bottom:1,
@@ -73,4 +71,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default ContatoInput;
+export default InputContato;
